@@ -8,6 +8,7 @@
 /.bundle
 backend/vendor/*
 backend/.idea/*
+backend/tmp/cache/*
 
 # Ignore all logfiles and tempfiles.
 /log/*
