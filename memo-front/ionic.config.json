@@ -1,0 +1,7 @@
+{
+  "name": "memo-front",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
