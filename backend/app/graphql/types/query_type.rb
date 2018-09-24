@@ -10,12 +10,37 @@ module Types
       "Hello World!"
     end
 
+    # usersの定義
     field :users, [UserType], null: true, description: "全ユーザーの取得"
 
     def users
-      User.all
-
-
+      User.order(updated_at: :desc)
     end
+
+    # user1件を取得
+    field :user, UserType, null: false, description: "ユーザー1件を取得" do
+      argument :id, ID, required: true
+    end
+
+    def user(id:)
+      User.find(id)
+    end
+
+    # articlesの定義
+    field :articles, [ArticleType], null: true, description: "全記事の取得"
+
+    def articles
+      Article.order(updated_at: :desc)
+    end
+
+    # article1件を取得
+    field :article, ArticleType, null: false, description: "記事1件を取得" do
+      argument :id, ID, required: true
+    end
+
+    def article(id:)
+      Article.find(id)
+    end
+
   end
 end
