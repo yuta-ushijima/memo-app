@@ -9,5 +9,13 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :users, [UserType], null: true, description: "全ユーザーの取得"
+
+    def users
+      User.all
+
+
+    end
   end
 end

@@ -9,6 +9,7 @@
 backend/vendor/*
 backend/.idea/*
 backend/tmp/cache/*
+backend/log/development.log
 
 # Ignore all logfiles and tempfiles.
 /log/*
