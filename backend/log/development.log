@@ -65,3 +65,455 @@ FOREIGN KEY (`user_id`)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `memo-app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `memo-app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('1725280216052477910', 0)[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1725280216052477910')[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (205.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1725280216052477910', 0)[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1725280216052477910')[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Miss Kesha Kihn', 'margaretta@yundtbode.org', 'Je82734r', '2018-09-24 08:11:53', '2018-09-24 08:11:53')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (17.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1725280216052477910', 0)[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1725280216052477910')[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Tammi Morissette', 'dannie@kingohara.net', '9qJbZ64', '2018-09-24 08:12:27', '2018-09-24 08:12:27')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (207.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('1725280216052477910', 0)[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1725280216052477910')[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Mr. Delphia Ortiz', 'sonny@luettgen.net', 'MgJ9H4L', '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Level', 'wild, big, soil, tamarind, orange', 3, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Java', 'complex, velvety, orange, graham cracker, barley', 3, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Dark Coffee', 'soft, smooth, dill, lime, tangerine', 3, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Morning Breaker', 'wild, tea-like, almond, soil, red currant', 3, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Major Breaker', 'astringent, smooth, mango, black pepper, fresh bread', 3, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Gema Kassulke', 'emerald@rutherford.org', '2d7nCw2', '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Solstice', 'mild, big, grapefruit, musty, lemon', 4, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Holiday Java', 'tart, round, star fruit, honeydew, carbon', 4, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Summer Star', 'delicate, big, white pepper, figs, kiwi', 4, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Cascara Equinox', 'pointed, velvety, bittersweet chocolate, clementine, honeysuckle', 4, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Summer Java', 'juicy, coating, nutmeg, cedar, cantaloupe', 4, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Stan Littel Jr.', 'milesbradtke@rolfson.co', '6gAtUi5', '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Morning Cake', 'muted, silky, lemon, mango, liquorice', 5, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Cascara Cowboy', 'deep, smooth, butter, squash, clove', 5, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Thanksgiving Solstice', 'balanced, chewy, grassy, bakers chocolate, black-tea', 5, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Kreb-Full-o Equinox', 'muted, syrupy, black pepper, black-tea, nutella', 5, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Mug', 'juicy, big, green pepper, green apple, black-tea', 5, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Jonas Harvey', 'bertie@kuhlmanschumm.biz', 'VsM0N52', '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Java', 'muted, slick, dill, rye, tomato', 6, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Morning Cake', 'structured, velvety, red currant, pecan, black cherry', 6, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Strong Cup', 'muted, tea-like, raspberry, honeysuckle, soy sauce', 6, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Morning Volcano', 'complex, velvety, green pepper, hops, mandarin', 6, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Winter Extract', 'sharp, big, lemon verbena, vanilla, prune', 6, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Annabell Ritchie', 'bernardofadel@johns.io', 'Tb115m47', '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Cascara Delight', 'lingering, velvety, fresh wood, ginger, cashew', 7, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Select', 'sharp, slick, magnolia, nutmeg, orange creamsicle', 7, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Reg\'s Enlightenment', 'wild, juicy, raisin, passion fruit, white grape', 7, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Green Cake', 'wild, creamy, dill, rye, raspberry', 7, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('The Captain\'s Delight', 'sharp, round, green-tea, cola, honey', 7, '2018-09-24 08:12:47', '2018-09-24 08:12:47')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Marcel Larkin', 'marshallcummerata@senger.co', 'Sh9pG1D', '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Seattle Enlightenment', 'pointed, velvety, mango, papaya, orange blossom', 8, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Delight', 'deep, big, cocoa powder, tomato, cacao nibs', 8, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Morning Select', 'vibrant, coating, magnolia, lemon verbena, carmel', 8, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Green Utopia', 'vibrant, creamy, musty, jasmine, mandarin', 8, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Jacked Select', 'dull, tea-like, musty, pineapple, squash', 8, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Robin Herman', 'fatimah@weinatturner.com', 'W2V94y3', '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Winter Level', 'faint, slick, magnolia, bakers chocolate, pecan', 9, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Nuts', 'crisp, silky, granola, marshmallow, prune', 9, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Pumpkin-spice Light', 'sharp, silky, leathery, concord grape, banana', 9, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('KrebStar Choice', 'structured, slick, dill, cantaloupe, dill', 9, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Select', 'clean, creamy, cantaloupe, blueberry, pineapple', 9, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Ms. Marya Schmeler', 'sammy@gradyveum.com', 'Mm69Rt74', '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Holiday Pie', 'muted, round, meyer lemon, maple syrup, fresh wood', 10, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Equinox', 'juicy, juicy, sundried tomato, peanut, black pepper', 10, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Equinox', 'wild, watery, magnolia, white pepper, bergamot', 10, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Good-morning Symphony', 'tart, silky, grassy, lychee, tobacco', 10, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Green Select', 'unbalanced, round, cola, honeydew, nutmeg', 10, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Kimbery Hammes', 'cristi@lynch.io', 'MxO49n35', '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Goodbye Nuts', 'mild, coating, sundried tomato, milk chocolate, honeydew', 11, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Red Symphony', 'unbalanced, slick, barley, honeydew, pecan', 11, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Wake-up Treat', 'vibrant, slick, bergamot, concord grape, green-tea', 11, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Pumpkin-spice Forrester', 'quick, tea-like, black currant, smokey, soil', 11, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Pumpkin-spice Select', 'deep, creamy, brown sugar, peanut, cantaloupe', 11, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Ms. Gail Padberg', 'bobbierosenbaum@conroydouglas.co', '9wIbCcDh', '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Strong Bean', 'wild, coating, lemongrass, tobacco, soy sauce', 12, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Street Utopia', 'soft, juicy, maple syrup, tomato, concord grape', 12, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Joe America', 'rounded, chewy, snow pea, blueberry, tobacco', 12, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('American Nuts', 'soft, chewy, graham cracker, black cherry, honeysuckle', 12, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Brooklyn Look', 'balanced, syrupy, fresh wood, black-tea, liquorice', 12, '2018-09-24 08:12:48', '2018-09-24 08:12:48')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
