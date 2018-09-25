@@ -13,7 +13,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ArticleListingPage } from "../pages/article/article-listing/article-listing.page";
+import { ArticleListPage } from "../pages/article/article-list/article-list";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +24,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    ArticleListingPage,
+    ArticleListPage,
     TabsPage
   ],
   imports: [
@@ -40,7 +40,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    ArticleListingPage,
+    ArticleListPage,
     TabsPage
   ],
   providers: [
