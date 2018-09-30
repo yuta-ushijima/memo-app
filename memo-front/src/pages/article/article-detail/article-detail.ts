@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams, NavController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import  gql from 'graphql-tag';
 
-// クエリの定義
+// コンポーネントのインポート
+import { ArticleListPage } from "../article-list/article-list";
+import {ArticleEditPage} from "../article-edit/article-edit";
+
+// queryの定義
 const getArticle = gql`
   query getArticle($id: ID!) {
     article(id: $id) {
@@ -12,18 +16,17 @@ const getArticle = gql`
       body
     }
   }`;
-/**
- * Generated class for the ArticleDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- * article(id: $id) {
-      id
-      title
-      body
+
+// mutationの作成
+//削除のmutation
+const deleteArticle = gql`
+  mutation deleteArticle($id: ID!) {
+    deleteArticle(id: $id) {
+      article {
+        id
+      }
     }
- *
- */
+  }`;
 
 @IonicPage()
 @Component({
@@ -38,7 +41,18 @@ export class ArticleDetailPage {
   article: any = {};
 
   constructor(public apollo: Apollo,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public navCtrl: NavController) {
+  }
+
+  // 編集ページへの遷移
+  editArticle(articleId: number) {
+    this.navCtrl.push(ArticleEditPage, { articleId: articleId });
+  }
+
+  // 削除ボタン実行処理
+  deleteArticle(articleId: number) {
+    this.deleteArticleAction(articleId)
   }
 
   async ngOnInit() {
@@ -67,6 +81,24 @@ export class ArticleDetailPage {
         // console.log("onCompleted");
       }
     );
+  }
+
+  // 削除処理
+  async deleteArticleAction(id: number) {
+    await this.apollo.mutate({
+      mutation: deleteArticle,
+      variables: {
+        id: id
+      }
+    }).subscribe(
+      (result) => {
+        console.log("削除成功:", result);
+        this.navCtrl.push(ArticleListPage)
+      },
+      (error) => {
+        console.log("削除失敗:", error)
+      }
+    )
   }
 
 }

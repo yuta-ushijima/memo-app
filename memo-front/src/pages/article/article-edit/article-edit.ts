@@ -15,6 +15,7 @@ const getArticle = gql`
   }`;
 
 /*mutationの作成*/
+//更新のmutation
 const updateArticle = gql`
 mutation updateArticle($id: ID!, $title: String!, $body: String!) {
     updateArticle(id: $id, title: $title, body: $body) {

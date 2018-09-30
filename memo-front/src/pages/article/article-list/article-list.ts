@@ -4,23 +4,13 @@ import { Apollo } from 'apollo-angular';
 import { Observable } from 'rxjs/Observable';
 import  gql from 'graphql-tag';
 import {ArticleDetailPage} from "../article-detail/article-detail";
-import {any} from "async";
 import {ArticleCreatePage} from "../article-create/article-create";
 import {ArticleEditPage} from "../article-edit/article-edit";
 
-// クエリの定義
+// queryの定義
 const Articles = gql`
   query {
     articles {
-      id
-      title
-      body
-    }
-  }`;
-
-const getArticle = gql`
-  query getArticle($id: ID!) {
-    article(id: $id) {
       id
       title
       body
@@ -67,7 +57,7 @@ export class ArticleListPage {
   async ngOnInit() {
     await this.loadData();
   }
-  /*usersの読み込み*/
+  /*articlesの読み込み*/
   async loadData() {
     await this.apollo.query({
       query: Articles,
