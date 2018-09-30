@@ -53,7 +53,6 @@ export class ArticleCreatePage {
         }
       }
     }).subscribe(
-
       (result) => {
         console.log("登録成功:", result);
         // 一覧ページへの遷移

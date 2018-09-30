@@ -6,6 +6,7 @@ import  gql from 'graphql-tag';
 import {ArticleDetailPage} from "../article-detail/article-detail";
 import {any} from "async";
 import {ArticleCreatePage} from "../article-create/article-create";
+import {ArticleEditPage} from "../article-edit/article-edit";
 
 // クエリの定義
 const Articles = gql`
@@ -55,7 +56,12 @@ export class ArticleListPage {
 
   // 詳細ページへの遷移
   details(articleId: number) {
-    this.navCtrl.push(ArticleDetailPage, { articleId: articleId});
+    this.navCtrl.push(ArticleDetailPage, { articleId: articleId });
+  }
+
+  // 編集ページへの遷移
+  editArticle(articleId: number) {
+    this.navCtrl.push(ArticleEditPage, { articleId: articleId });
   }
 
   async ngOnInit() {
