@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
+import { Observable } from 'rxjs/Observable';
 import  gql from 'graphql-tag';
 import {ArticleDetailPage} from "../article-detail/article-detail";
+import {any} from "async";
+import {ArticleCreatePage} from "../article-create/article-create";
 
 // クエリの定義
 const Articles = gql`
   query {
     articles {
+      id
+      title
+      body
+    }
+  }`;
+
+const getArticle = gql`
+  query getArticle($id: ID!) {
+    article(id: $id) {
       id
       title
       body
@@ -29,10 +41,16 @@ const Articles = gql`
 export class ArticleListPage {
 
   // プロパティの定義
-  articles = [];
+
+  articles: Observable<any>;
 
   constructor(public apollo: Apollo,
               public navCtrl: NavController) {
+  }
+
+  // 新規作成ページへの遷移
+  postArticle() {
+    this.navCtrl.push(ArticleCreatePage);
   }
 
   // 詳細ページへの遷移
@@ -49,7 +67,6 @@ export class ArticleListPage {
       query: Articles,
     }).subscribe(
       (result) => {
-        console.log(result);
         this.articles = result.data['articles']
       },
       (error) => {

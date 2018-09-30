@@ -14,6 +14,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ArticleListPage } from "../pages/article/article-list/article-list";
+import { ArticleDetailPage} from "../pages/article/article-detail/article-detail";
+import { ArticleCreatePage} from "../pages/article/article-create/article-create";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     ArticleListPage,
+    ArticleDetailPage,
+    ArticleCreatePage,
     TabsPage
   ],
   imports: [
@@ -41,6 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     ArticleListPage,
+    ArticleDetailPage,
+    ArticleCreatePage,
     TabsPage
   ],
   providers: [

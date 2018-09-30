@@ -14,9 +14,17 @@
 
 
 <ion-content padding>
+  <button (click)="postArticle()" ion-button icon-start>
+    <ion-icon name="pen"></ion-icon>
+    Create
+  </button>
   <ion-list inset>
-    <button ion-item *ngFor="let article of articles" (click)="details(article.id)">
+    <div ion-item *ngFor="let article of articles">
       {{ article.title }}
-    </button>
+      <button (click)="details(article.id)" ion-button icon-start>
+        <ion-icon name="eye"></ion-icon>
+        View
+      </button>
+    </div>
   </ion-list>
 </ion-content>
