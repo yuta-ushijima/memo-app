@@ -14,21 +14,25 @@
 
 
 <ion-content padding>
-  <button (click)="postArticle()" ion-button icon-start>
-    <ion-icon name="pen"></ion-icon>
-    Create
-  </button>
+  <div class="create-button-position">
+    <button (click)="postArticle()" ion-button icon-start>
+      <ion-icon name="create"></ion-icon>
+      Create
+    </button>
+  </div>
   <ion-list inset>
     <div ion-item *ngFor="let article of articles">
       {{ article.title }}
-      <button (click)="details(article.id)" ion-button icon-start>
-        <ion-icon name="ionitron"></ion-icon>
-        View
-      </button>
-      <button (click)="editArticle(article.id)" ion-button icon-start>
-        <ion-icon name="create"></ion-icon>
-        Edit
-      </button>
+      <div class="button-position">
+        <button (click)="details(article.id)" ion-button icon-start>
+          <ion-icon name="ionitron"></ion-icon>
+          View
+        </button>
+        <button (click)="editArticle(article.id)" ion-button icon-start>
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+      </div>
     </div>
   </ion-list>
 </ion-content>
