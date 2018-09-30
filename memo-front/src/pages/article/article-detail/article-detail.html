@@ -22,14 +22,16 @@
           {{ article.body}}
         </div>
       </ion-card-content>
-      <button (click)="editArticle(article.id)" ion-button icon-start>
-        <ion-icon name="create"></ion-icon>
-        Edit
-      </button>
-      <button (click)="deleteArticle(article.id)" ion-button icon-start>
-        <ion-icon name="trash"></ion-icon>
-        delete
-      </button>
+      <div class="button-position">
+        <button (click)="editArticle(article.id)" ion-button icon-start>
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+        <button (click)="deleteArticle(article.id)" ion-button icon-start>
+          <ion-icon name="trash"></ion-icon>
+          delete
+        </button>
+      </div>
     </ion-card>
   </ion-item>
 </ion-content>
