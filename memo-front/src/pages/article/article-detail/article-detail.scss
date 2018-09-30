@@ -1,0 +1,36 @@
+page-article-detail {
+  ion-card {
+    max-width: 64.0rem;
+  }
+  ion-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    color: #222;
+    padding: 0.8rem;
+  }
+  ion-card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .ion-card-image-container {
+      width: 35%
+    }
+    .ion-card-description-container {
+      width: 65%;
+      text-align: center;
+    }
+    img {
+      max-width: 20.0rem;
+    }
+    div {
+      white-space: pre-line;
+      padding-right: 0.8rem;
+    }
+  }
+  ion-col {
+    border: none;
+  }
+}
