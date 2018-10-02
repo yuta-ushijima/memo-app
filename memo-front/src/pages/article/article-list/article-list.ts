@@ -7,6 +7,8 @@ import {ArticleDetailPage} from "../article-detail/article-detail";
 import {ArticleCreatePage} from "../article-create/article-create";
 import {ArticleEditPage} from "../article-edit/article-edit";
 
+import { LoaderService } from "../../shared/service/loader.service";
+
 // queryの定義
 const Articles = gql`
   query {
@@ -36,7 +38,8 @@ export class ArticleListPage {
   articles: Observable<any>;
 
   constructor(public apollo: Apollo,
-              public navCtrl: NavController) {
+              public navCtrl: NavController,
+              public loadService: LoaderService) {
   }
 
   // 新規作成ページへの遷移
@@ -55,6 +58,7 @@ export class ArticleListPage {
   }
 
   async ngOnInit() {
+    this.loadService.presentLoading();
     await this.loadData();
   }
   /*articlesの読み込み*/

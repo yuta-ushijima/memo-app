@@ -7,6 +7,8 @@ import  gql from 'graphql-tag';
 import { ArticleListPage } from "../article-list/article-list";
 import {ArticleEditPage} from "../article-edit/article-edit";
 
+import { LoaderService } from "../../shared/service/loader.service";
+
 // queryの定義
 const getArticle = gql`
   query getArticle($id: ID!) {
@@ -42,7 +44,8 @@ export class ArticleDetailPage {
 
   constructor(public apollo: Apollo,
               public navParams: NavParams,
-              public navCtrl: NavController) {
+              public navCtrl: NavController,
+              public loaderService: LoaderService) {
   }
 
   // 編集ページへの遷移
@@ -56,6 +59,7 @@ export class ArticleDetailPage {
   }
 
   async ngOnInit() {
+    this.loaderService.presentLoading();
     await this.loadData()
   }
 
