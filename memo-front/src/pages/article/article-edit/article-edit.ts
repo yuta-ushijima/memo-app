@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import  gql from 'graphql-tag';
 import {ArticleListPage} from "../article-list/article-list";
+import { ToastService } from "../../shared/service/toast_service";
 
 /*queryの取得*/
 const getArticle = gql`
@@ -42,7 +43,8 @@ export class ArticleEditPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public apollo: Apollo) {
+              public apollo: Apollo,
+              public toaster: ToastService) {
   }
 
   async ngOnInit() {
@@ -90,9 +92,11 @@ export class ArticleEditPage {
       (result) => {
         console.log("更新成功: ", result);
         this.navCtrl.push(ArticleListPage);
+        this.toaster.presentSuccessfulToast("記事を更新しました！")
       },
       (error) => {
         console.log("更新失敗:", error);
+        this.toaster.presentErrorToast("記事を更新できませんでした...。")
       }
     )
   }
