@@ -86,3 +86,27 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// Toast
+// --------------------------------------------------
+.toast-successful {
+  > div {
+    background-color: #2aabd2 !important;
+    width: 100%;
+  }
+
+  .toast-message {
+    color: white !important;
+  }
+}
+
+.toast-error {
+  > div {
+    background-color: #cc0000 !important;
+    width: 100%;
+  }
+
+  .toast-message {
+    color: white !important;
+  }
+}

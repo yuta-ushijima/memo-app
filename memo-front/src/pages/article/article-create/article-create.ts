@@ -4,6 +4,7 @@ import { Apollo } from 'apollo-angular';
 import { Observable } from 'rxjs/Observable';
 import  gql from 'graphql-tag';
 import {ArticleListPage} from "../article-list/article-list";
+import { ToastService } from "../../shared/service/toast_service";
 
 /* Mutationの定義 */
 const createArticle = gql`
@@ -31,7 +32,8 @@ export class ArticleCreatePage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public apollo: Apollo) {
+              public apollo: Apollo,
+              public toaster: ToastService) {
   }
 
   ngOnInit() {}
@@ -57,9 +59,11 @@ export class ArticleCreatePage {
         console.log("登録成功:", result);
         // 一覧ページへの遷移
         this.navCtrl.push(ArticleListPage);
+        this.toaster.presentSuccessfulToast("記事を投稿しました！")
       },
       (error) => {
         console.log("登録失敗:", error);
+        this.toaster.presentErrorToast("記事を投稿できませんでした...。")
       }
      );
   }
