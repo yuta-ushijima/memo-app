@@ -22,6 +22,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ToastService } from "../pages/shared/service/toast_service";
 import { LoaderService } from "../pages/shared/service/loader.service";
+import { NewsPage } from "../pages/news/news";
+import {NewsService} from "../pages/shared/service/news.service";
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { LoaderService } from "../pages/shared/service/loader.service";
     ArticleDetailPage,
     ArticleCreatePage,
     ArticleEditPage,
+    NewsPage,
     TabsPage
   ],
   imports: [
@@ -52,6 +55,7 @@ import { LoaderService } from "../pages/shared/service/loader.service";
     ArticleDetailPage,
     ArticleCreatePage,
     ArticleEditPage,
+    NewsPage,
     TabsPage
   ],
   providers: [
@@ -59,6 +63,7 @@ import { LoaderService } from "../pages/shared/service/loader.service";
     SplashScreen,
     ToastService,
     LoaderService,
+    NewsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
