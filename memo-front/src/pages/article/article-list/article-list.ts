@@ -42,11 +42,6 @@ export class ArticleListPage {
               public loadService: LoaderService) {
   }
 
-  // 新規作成ページへの遷移
-  postArticle() {
-    this.navCtrl.push(ArticleCreatePage);
-  }
-
   // 詳細ページへの遷移
   details(articleId: number) {
     this.navCtrl.push(ArticleDetailPage, { articleId: articleId });

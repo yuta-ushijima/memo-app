@@ -1,14 +1,17 @@
+/* 内部モジュールのインポート */
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-/*ApolloClientのインポート*/
+/* 外部モジュールのインポート */
 import { HttpClientModule } from '@angular/common/http';
 import { ApolloBoost, ApolloBoostModule } from "apollo-angular-boost";
 import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
 import  { InMemoryCache } from "apollo-cache-inmemory";
+import { InAppBrowser } from "@ionic-native/in-app-browser";
 
+/* コンポーネントのインポート */
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -64,6 +67,7 @@ import {NewsService} from "../pages/shared/service/news.service";
     ToastService,
     LoaderService,
     NewsService,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

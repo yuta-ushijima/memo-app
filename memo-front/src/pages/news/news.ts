@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {NewsService} from "../shared/service/news.service";
+import { NewsService } from "../shared/service/news.service";
+import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
+import {ArticleCreatePage} from "../article/article-create/article-create";
 
 /**
  * Generated class for the NewsPage page.
@@ -15,10 +17,13 @@ import {NewsService} from "../shared/service/news.service";
   templateUrl: 'news.html',
 })
 export class NewsPage implements OnInit {
-
+  /* プロパティの定義*/
   news: any;
+  url: string;
 
-  constructor(public newsService: NewsService) {
+  constructor(public newsService: NewsService,
+              private inAppBrowser: InAppBrowser,
+              private navCtrl: NavController) {
   }
 
  ngOnInit() {
@@ -26,5 +31,21 @@ export class NewsPage implements OnInit {
       this.news = data;
       console.log(data);
     })
+ }
+
+  // 新規作成ページへの遷移
+  postArticle() {
+    this.navCtrl.push(ArticleCreatePage);
+  }
+
+ openWebpage(url: string) {
+
+    const options: InAppBrowserOptions = {
+      location: "yes",
+      toolbar : 'yes'
+    }
+
+    /*urlを開く*/
+    this.inAppBrowser.create(url, '_system', options);
  }
 }
