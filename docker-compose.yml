@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  database:
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: $MEMOAPP_DATABASE_PASSWORD
+      MYSQL_PORT: 3310
+    ports:
+    - 3310:3310
+    volumes:
+    - ./backend/docker/mysql/conf:/etc/mysql/conf.d:rw
+    - ./mysql-datavolume:/var/lib/mysql
+
+  backend:
+    depends_on:
+    - database
+    environment:
+      RAILS_MAX_THREADS: $MEMOAPP_RAILS_MAX_THREADS
+      MYSQL_USERNAME: $MEMOAPP_DATABASE_USERNAME
+      MYSQL_PASSWORD: $MEMOAPP_DATABASE_PASSWORD
+      MYSQL_HOST: database
+      MYSQL_PORT: 3310
+    volumes:
+    - ./backend:/memo-app/backend
+    build: ./backend
+    ports:
+    - 3000:3000
+
+  memo-front:
+    depends_on:
+    - backend
+    build: ./memo-front
+    ports:
+    - 8100:8100

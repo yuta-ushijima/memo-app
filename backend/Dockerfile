@@ -1,6 +1,6 @@
 # Backend(Rails/MySQL)
 # 使用するrubyのバージョン
-FROM ruby:2.5.1
+FROM ruby:2.4.1
 
 # このDockerfileの管理者
 MAINTAINER Yuta_Ushijima <contact@yuta-u.com>
@@ -61,8 +61,8 @@ RUN if test -f Gemfile.lock; then \
   fi
 RUN rm Gemfile Gemfile.lock
 
-RUN mkdir -p /rally/backend
-WORKDIR /rally/backend
+RUN mkdir -p /memo-app/backend
+WORKDIR /memo-app/backend
 ADD . .
 
 ENV RAILS_SERVE_STATIC_FILES=true \
@@ -81,4 +81,4 @@ ENV PORT=3000 \
 CMD dumb-init -- docker/bin/start rails
 
 EXPOSE 3000
-EXPOSE 3306
+EXPOSE 3310

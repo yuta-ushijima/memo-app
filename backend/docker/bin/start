@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ $# = 0 ]; then
+  echo "usage:"
+  echo "  start rails:              Start rails server"
+  echo "  start rails recreate db:  Start rails server recreate db"
+  echo "  start sidekiq:            Start sidekiq process"
+  echo "  start sidekiq-web:        Start sidekiq web server"
+  exit 1
+fi
+
+case "$1" in
+  "rails")
+    bundle exec rails tmp:pids:clear
+    bundle exec rails db:migrate 2>/dev/null || rails db:reset
+    bundle exec rails log:clear tmp:clear
+    bundle exec rails server --port 3000 --binding "0.0.0.0"
+    ;;
+  "rails recreate db")
+    bundle exec rails tmp:pids:clear
+    bundle exec rails db:reset
+    bundle exec rails db:migrate
+    bundle exec rails log:clear tmp:clear
+    bundle exec rails server --port 3000 --binding "0.0.0.0"
+    ;;
+  "sidekiq")
+    bundle exec sidekiq
+    ;;
+  "sidekiq-web")
+    bundle exec rackup --host "0.0.0.0" --port 9292 lib/sidekiq_web/config.ru
+    ;;
+esac
