@@ -47,6 +47,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    chunky_png (1.3.10)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
@@ -129,6 +130,11 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rqrcode (0.10.1)
+      chunky_png (~> 1.0)
+    rqrcode_png (0.1.5)
+      chunky_png
+      rqrcode
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.1)
@@ -173,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  chunky_png
   database_cleaner (~> 1.7.0)
   factory_bot_rails (~> 4.10.0)
   faker
@@ -184,6 +191,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.0)
+  rqrcode
+  rqrcode_png
   rspec-rails (~> 3.7)
   spring
   spring-watcher-listen (~> 2.0.0)
