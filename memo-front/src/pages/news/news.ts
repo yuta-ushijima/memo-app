@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewsService } from "../shared/service/news.service";
 import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
 import {ArticleCreatePage} from "../article/article-create/article-create";
+import {LoaderService} from "../shared/service/loader.service";
 
 /**
  * Generated class for the NewsPage page.
@@ -23,10 +24,12 @@ export class NewsPage implements OnInit {
 
   constructor(public newsService: NewsService,
               private inAppBrowser: InAppBrowser,
-              private navCtrl: NavController) {
+              private navCtrl: NavController,
+              public loadService: LoaderService) {
   }
 
  ngOnInit() {
+   this.loadService.presentLoading();
     this.newsService.getData('top-headlines?country=jp&category=technology&').subscribe(data => {
       this.news = data;
       console.log(data);

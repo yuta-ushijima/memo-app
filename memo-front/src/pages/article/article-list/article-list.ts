@@ -4,7 +4,6 @@ import { Apollo } from 'apollo-angular';
 import { Observable } from 'rxjs/Observable';
 import  gql from 'graphql-tag';
 import {ArticleDetailPage} from "../article-detail/article-detail";
-import {ArticleCreatePage} from "../article-create/article-create";
 import {ArticleEditPage} from "../article-edit/article-edit";
 
 import { LoaderService } from "../../shared/service/loader.service";
