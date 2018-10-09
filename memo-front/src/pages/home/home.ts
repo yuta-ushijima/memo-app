@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,25 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  // 最終的にはスライドにする
+  slideList = [
+    {
+      'image': "https://source.unsplash.com/category/office/"
+    }
+  ];
 
+  constructor(public modalCtrl: ModalController) {}
+
+  /* For Signup*/
+  presentSignupModal() {
+    const signupModal = this.modalCtrl.create("");
+    signupModal.present();
+  }
+
+  /* For Login */
+  presentLoginModal() {
+    const signupModal = this.modalCtrl.create("");
+    signupModal.present()
   }
 
 }
