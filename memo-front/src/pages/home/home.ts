@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
+import {LoginPage} from "../login/login";
+import {SignupPage} from "../signup/signup";
 
 @Component({
   selector: 'page-home',
@@ -18,14 +20,14 @@ export class HomePage {
 
   /* For Signup*/
   presentSignupModal() {
-    const signupModal = this.modalCtrl.create("");
+    const signupModal = this.modalCtrl.create(SignupPage);
     signupModal.present();
   }
 
   /* For Login */
   presentLoginModal() {
-    const signupModal = this.modalCtrl.create("");
-    signupModal.present()
+    const loginModal = this.modalCtrl.create(LoginPage);
+    loginModal.present()
   }
 
 }
