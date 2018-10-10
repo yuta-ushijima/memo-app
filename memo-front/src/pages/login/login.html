@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>ログイン</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only [outline] [clear] color="dark" (click)="dismissButton()">
+        <ion-icon ios="ios-close" md="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="facebook-link">
+    <ion-icon name="logo-facebook" item-start padding></ion-icon>
+    Facebook
+  </ion-card>
+  <ion-card class="line-link">
+    <div>
+      <ion-img src="assets/imgs/line.png" item-start></ion-img>
+      <span padding-left>LINE</span>
+    </div>
+  </ion-card>
+  <ion-card class="instagram-link">
+    <ion-icon name="logo-instagram" item-start padding></ion-icon>
+    Instagram
+  </ion-card>
+  <ion-card (click)="push()">
+    <ion-icon name="ios-mail-outline" item-start padding></ion-icon>
+    メールアドレス
+  </ion-card>
+</ion-content>

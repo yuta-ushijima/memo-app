@@ -1,0 +1,23 @@
+page-login {
+  .scroll-content {
+    overflow: hidden;
+  }
+  ion-card.facebook-link{
+    background-color: #3b5998;
+    color: white;
+  }
+  ion-card.line-link{
+    background-color:#00b900;
+    color: white;
+    div{
+      padding: 12px;
+      span{
+        vertical-align: super;
+      }
+    }
+  }
+  ion-card.instagram-link{
+    background-image: url("/assets/images/instagram.png");
+    color: white;
+  }
+}
