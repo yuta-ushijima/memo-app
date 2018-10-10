@@ -12,7 +12,6 @@ import  { InMemoryCache } from "apollo-cache-inmemory";
 import { InAppBrowser } from "@ionic-native/in-app-browser";
 
 /* コンポーネントのインポート */
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ArticleListPage } from "../pages/article/article-list/article-list";
@@ -26,18 +25,21 @@ import { ToastService } from "../pages/shared/service/toast_service";
 import { LoaderService } from "../pages/shared/service/loader.service";
 import { NewsPage } from "../pages/news/news";
 import {NewsService} from "../pages/shared/service/news.service";
+import {LoginPage} from "../pages/login/login";
+import {SignupPage} from "../pages/signup/signup";
 
 @NgModule({
   declarations: [
     MyApp,
-    ContactPage,
     HomePage,
     ArticleListPage,
     ArticleDetailPage,
     ArticleCreatePage,
     ArticleEditPage,
     NewsPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -49,14 +51,15 @@ import {NewsService} from "../pages/shared/service/news.service";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ContactPage,
     HomePage,
     ArticleListPage,
     ArticleDetailPage,
     ArticleCreatePage,
     ArticleEditPage,
     NewsPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
