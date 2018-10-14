@@ -3,34 +3,38 @@ version: "3"
 services:
   database:
     restart: always
-    image: mysql:latest
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: $MEMOAPP_DATABASE_PASSWORD
-      MYSQL_PORT: 3310
+      MYSQL_PORT: 3306
     ports:
-    - 3310:3310
-    volumes:
-    - ./backend/docker/mysql/conf:/etc/mysql/conf.d:rw
-    - ./mysql-datavolume:/var/lib/mysql
+      - 3310:3306
 
   backend:
     depends_on:
-    - database
+      - database
+    command: bundle exec rails s -p 3200 -b '0.0.0.0'
     environment:
       RAILS_MAX_THREADS: $MEMOAPP_RAILS_MAX_THREADS
       MYSQL_USERNAME: $MEMOAPP_DATABASE_USERNAME
       MYSQL_PASSWORD: $MEMOAPP_DATABASE_PASSWORD
       MYSQL_HOST: database
-      MYSQL_PORT: 3310
+      MYSQL_PORT: 3306
     volumes:
-    - ./backend:/memo-app/backend
+      - ./backend:/memo-app/backend
+      - "bundle:/usr/local/bundle"
     build: ./backend
     ports:
-    - 3000:3000
+      - 3200:3200
 
   memo-front:
     depends_on:
-    - backend
+      - backend
     build: ./memo-front
     ports:
-    - 8100:8100
+      - 8100:8100
+    entrypoint: "/bin/sh -c 'npm install && npm run start'"
+
+volumes:
+  bundle:
+    driver: local

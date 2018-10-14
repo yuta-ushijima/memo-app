@@ -3,7 +3,7 @@
 FROM ruby:2.4.1
 
 # このDockerfileの管理者
-MAINTAINER Yuta_Ushijima <contact@yuta-u.com>
+LABEL maintainer="Yuta_Ushijima <contact@yuta-u.com>"
 
 # 文字コードの設定
 ENV LANG=C.UTF-8 \
@@ -42,11 +42,7 @@ RUN apt-get update --fix-missing \
     zlib1g-dev \
   && apt-get autoremove -y \
   && apt-get clean all \
-  && fc-cache -f -v
-
-# Add dumb init to process system events
-RUN wget https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 -O /usr/local/bin/dumb-init
-RUN chmod +x /usr/local/bin/dumb-init
+  && fc-cache -fv
 
 # precache slow gems for quicker bundle
 RUN gem update --system
@@ -66,19 +62,12 @@ WORKDIR /memo-app/backend
 ADD . .
 
 ENV RAILS_SERVE_STATIC_FILES=true \
-    PORT=3000 \
+    PORT=3200 \
     TERM=xterm
 
-ENV PORT=3000 \
-    # RACK_ENV=development \
-    # RAILS_ENV=development \
+ENV PORT=3200 \
     RAILS_SERVE_STATIC_FILES=true \
     TERM=xterm
 
-# Run asset pipeline if we're in a Rails app.
-# RUN RAILS_ENV=production SENTRY_DSN=disable bundle exec rake assets:precompile || true
-
-CMD dumb-init -- docker/bin/start rails
-
-EXPOSE 3000
+EXPOSE 3200
 EXPOSE 3310

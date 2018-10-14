@@ -3,7 +3,7 @@
 FROM node:8.12.0
 
 # このDockerfileの管理者
-MAINTAINER Yuta_Ushijima <contact@yuta-u.com>
+LABEL maintainer="Yuta_Ushijima <contact@yuta-u.com>"
 
 # 文字コード
 ENV LANG C.UTF-8
