@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
-import { Observable } from 'rxjs/Observable';
 import  gql from 'graphql-tag';
 import {ArticleListPage} from "../article-list/article-list";
 import { ToastService } from "../../shared/service/toast_service";
