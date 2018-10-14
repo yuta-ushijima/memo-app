@@ -31,6 +31,7 @@
     "apollo-angular-link-http": "^1.2.0",
     "apollo-cache-inmemory": "^1.2.10",
     "apollo-client": "^2.4.2",
+    "cordova-android": "7.0.0",
     "cordova-ios": "4.5.5",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-inappbrowser": "~3.0.0",
@@ -65,7 +66,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
