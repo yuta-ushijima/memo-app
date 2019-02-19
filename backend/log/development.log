@@ -517,3 +517,527 @@ FOREIGN KEY (`user_id`)
   ↳ db/seeds.rb:7
   [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:7
+  [1m[35m (20.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE DATABASE `memo-app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `memo-app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `articles` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (35.2ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_articles_on_user_id`  (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:24
+  [1m[35m (26.8ms)[0m  [1m[35mALTER TABLE `articles` ADD CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  ↳ db/schema.rb:32
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20180924075508)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20180924073445);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-02-19 15:31:51', '2019-02-19 15:31:51')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `articles` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_articles_on_user_id`  (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:24
+  [1m[35m (89.4ms)[0m  [1m[35mALTER TABLE `articles` ADD CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  ↳ db/schema.rb:32
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20180924075508)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20180924073445);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (3.0ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Danae Dietrich', 'karlenegulgowski@monahanwaters.net', '287lUdU', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (7.0ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Brooklyn Volcano', 'muted, velvety, fresh wood, graham cracker, red currant', 1, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Huggy Cup', 'complex, juicy, peach, golden raisin, liquorice', 1, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Wake-up Mug', 'tart, chewy, mandarin, snow pea, cacao nibs', 1, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Street Town', 'bright, coating, green grape, cranberry, graham cracker', 1, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Mug', 'structured, coating, mango, mandarin, orange creamsicle', 1, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Mellie Ankunding', 'carey@steuber.name', 'DnYvRtQ', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Select', 'sharp, velvety, clove, bakers chocolate, mushroom', 2, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Kreb-Full-o Enlightenment', 'astringent, juicy, clementine, toast, almond', 2, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Brooklyn Cake', 'structured, silky, soil, tangerine, black-tea', 2, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Equinox', 'muted, smooth, cantaloupe, orange, burnt sugar', 2, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Choice', 'tart, velvety, bakers chocolate, raisin, clove', 2, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Milly Schoen', 'curtisjacobs@hansen.com', '63Uz3j0', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('The Captain\'s Town', 'dull, big, cinnamon, marzipan, leathery', 3, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Summer America', 'faint, syrupy, barley, watermelon, banana', 3, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Summer Blend', 'sharp, watery, plum, cocoa powder, rubber', 3, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('The Captain\'s Bean', 'muted, juicy, nutmeg, grassy, lavender', 3, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Coffee', 'soft, juicy, cantaloupe, orange, lemon verbena', 3, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Malinda Fay', 'desiregerhold@goodwin.org', '42Cj6f', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Reg\'s Nuts', 'sharp, silky, red grape, milk chocolate, granola', 4, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Goodbye Solstice', 'deep, full, nutella, potato defect!, nutmeg', 4, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Express Town', 'dirty, smooth, cola, green pepper, butter', 4, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Summer Breaker', 'muted, full, blueberry, lime, hay', 4, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Evening Solstice', 'unbalanced, syrupy, orange blossom, tobacco, molasses', 4, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Randolph Reichel V', 'slyvia@christiansensanford.name', 'EpGnZ1Hf', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Brooklyn America', 'sharp, coating, mushroom, burnt sugar, curry', 5, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Hello Coffee', 'mild, tea-like, black cherry, lemon, coconut', 5, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Cascara Treat', 'pointed, juicy, cream, tomato, meyer lemon', 5, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Blue Mug', 'faint, tea-like, carmel, baggy, leafy greens', 5, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Blue Choice', 'bright, round, tomato, rubber, soil', 5, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Kanisha Gleichner V', 'wendellschmitt@krislesch.net', '1c31PhI', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Good-morning Cake', 'delicate, smooth, nougat, clove, hibiscus', 6, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Holiday Star', 'unbalanced, juicy, granola, plum, passion fruit', 6, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Brooklyn Treat', 'delicate, round, kiwi, snow pea, cantaloupe', 6, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Postmodern Symphony', 'astringent, silky, jasmine, carmel, soil', 6, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Kreb-Full-o Bean', 'crisp, tea-like, honeydew, peach, mushroom', 6, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Paul Sauer Jr.', 'shanellerenner@zboncakrohan.org', 'WdFrBu', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Holiday Pie', 'vibrant, big, figs, green pepper, red apple', 7, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Café Star', 'faint, big, tangerine, curry, curry', 7, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Seattle Coffee', 'dull, full, meyer lemon, grapefruit, marshmallow', 7, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Jacked Forrester', 'deep, silky, olive, figs, star fruit', 7, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Blue Choice', 'wild, syrupy, marshmallow, leafy greens, raisin', 7, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Ms. Bobby Block', 'chante@dachflatley.co', 'ZtTiEzA', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Captain\'s Utopia', 'crisp, silky, pineapple, quakery, raspberry', 8, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('American Light', 'deep, syrupy, marshmallow, granola, cantaloupe', 8, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Split Look', 'structured, slick, cantaloupe, cashew, granola', 8, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Seattle Been', 'dirty, full, walnut, curry, concord grape', 8, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Good-morning Symphony', 'wild, silky, toast, potato defect!, orange blossom', 8, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Kirby Wiza MD', 'bradlyoconnell@feestsanford.io', 'Qf08Rd', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Spilt Utopia', 'structured, round, star fruit, orange, milk chocolate', 9, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Enlightenment', 'faint, round, carbon, red grape, pecan', 9, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Forrester', 'faint, tea-like, milk chocolate, meyer lemon, black currant', 9, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('The Utopia', 'sharp, full, figs, black-tea, passion fruit', 9, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Street Nuts', 'rounded, creamy, brown sugar, black pepper, potato defect!', 9, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`user_name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('Zachary Crooks', 'hortensiaabernathy@sanford.biz', 'LoK5PiB', '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Seattle Utopia', 'deep, tea-like, red currant, barley, baggy', 10, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('The Captain\'s Light', 'vibrant, velvety, brown sugar, orange, nutella', 10, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Melty Java', 'vibrant, full, walnut, orange creamsicle, plum', 10, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('Huggy Mug', 'balanced, chewy, black-tea, mango, green apple', 10, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('American Extract', 'structured, chewy, passion fruit, red currant, plum', 10, '2019-02-19 15:31:52', '2019-02-19 15:31:52')[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:32:44 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>nil, "variables"=>{}, "query"=>"{\n  articles {\n    id\n    title\n    body\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>nil, "variables"=>{}, "query"=>"{\n  articles {\n    id\n    title\n    body\n    __typename\n  }\n}\n"}}
+  [1m[36mArticle Load (4.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`updated_at` DESC[0m
+  ↳ app/controllers/graphql_controller.rb:10
+Completed 200 OK in 81ms (Views: 1.4ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:32:55 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>"getArticle", "variables"=>{"id"=>"1"}, "query"=>"query getArticle($id: ID!) {\n  article(id: $id) {\n    id\n    title\n    body\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>"getArticle", "variables"=>{"id"=>"1"}, "query"=>"query getArticle($id: ID!) {\n  article(id: $id) {\n    id\n    title\n    body\n    __typename\n  }\n}\n"}}
+  [1m[36mArticle Load (5.8ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/graphql/types/query_type.rb:42
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:33:04 +0900
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>"deleteArticle", "variables"=>{"id"=>"1"}, "query"=>"mutation deleteArticle($id: ID!) {\n  deleteArticle(id: $id) {\n    article {\n      id\n      __typename\n    }\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>"deleteArticle", "variables"=>{"id"=>"1"}, "query"=>"mutation deleteArticle($id: ID!) {\n  deleteArticle(id: $id) {\n    article {\n      id\n      __typename\n    }\n    __typename\n  }\n}\n"}}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/graphql/mutations/delete_article.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/graphql/mutations/delete_article.rb:11
+  [1m[36mArticle Destroy (1.3ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 1[0m
+  ↳ app/graphql/mutations/delete_article.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/graphql/mutations/delete_article.rb:11
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:35:03 +0900
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>"createArticle", "variables"=>{"title"=>"ゲーマー向け周辺機器がAmazonで安いらしい", "body"=>"プロゲーマーがみとめるPS4向け機器が安いらしい", "user_id"=>nil}, "query"=>"mutation createArticle($title: String!, $body: String!, $user_id: ID!) {\n  createArticle(title: $title, body: $body, userId: $user_id) {\n    article {\n      title\n      body\n      userId\n      __typename\n    }\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>"createArticle", "variables"=>{"title"=>"ゲーマー向け周辺機器がAmazonで安いらしい", "body"=>"プロゲーマーがみとめるPS4向け機器が安いらしい", "user_id"=>nil}, "query"=>"mutation createArticle($title: String!, $body: String!, $user_id: ID!) {\n  createArticle(title: $title, body: $body, userId: $user_id) {\n    article {\n      title\n      body\n      userId\n      __typename\n    }\n    __typename\n  }\n}\n"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:35:14 +0900
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>"createArticle", "variables"=>{"title"=>"ゲーマー向け周辺機器がAmazonで安いらしい", "body"=>"プロゲーマーがみとめるPS4向け機器が安いらしい", "user_id"=>1}, "query"=>"mutation createArticle($title: String!, $body: String!, $user_id: ID!) {\n  createArticle(title: $title, body: $body, userId: $user_id) {\n    article {\n      title\n      body\n      userId\n      __typename\n    }\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>"createArticle", "variables"=>{"title"=>"ゲーマー向け周辺機器がAmazonで安いらしい", "body"=>"プロゲーマーがみとめるPS4向け機器が安いらしい", "user_id"=>1}, "query"=>"mutation createArticle($title: String!, $body: String!, $user_id: ID!) {\n  createArticle(title: $title, body: $body, userId: $user_id) {\n    article {\n      title\n      body\n      userId\n      __typename\n    }\n    __typename\n  }\n}\n"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/graphql/mutations/create_article.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/graphql/mutations/create_article.rb:14
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `user_id`, `created_at`, `updated_at`) VALUES ('ゲーマー向け周辺機器がAmazonで安いらしい', 'プロゲーマーがみとめるPS4向け機器が安いらしい', 1, '2019-02-19 15:35:14', '2019-02-19 15:35:14')[0m
+  ↳ app/graphql/mutations/create_article.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/graphql/mutations/create_article.rb:14
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2019-02-20 00:35:51 +0900
+Processing by GraphqlController#execute as HTML
+  Parameters: {"operationName"=>nil, "variables"=>{}, "query"=>"{\n  articles {\n    id\n    title\n    body\n    __typename\n  }\n}\n", "graphql"=>{"operationName"=>nil, "variables"=>{}, "query"=>"{\n  articles {\n    id\n    title\n    body\n    __typename\n  }\n}\n"}}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`updated_at` DESC[0m
+  ↳ app/controllers/graphql_controller.rb:10
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+

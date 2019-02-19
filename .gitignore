@@ -6,8 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
-backend/vendor/*
-backend/.idea/*
+/backend/vendor/*
+/backend/.idea/*
 backend/tmp/cache/*
 backend/log/development.log
 backend/tmp/restart.txt
